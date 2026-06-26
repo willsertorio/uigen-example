@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revelo UI Gen example</title>
+<style>
+  :root{
+    --ink:#0e0e10;
+    --paper:#ffffff;
+    --muted:#5a5a63;
+    --line:#e6e6ea;
+    --accent:#1a4dff;
+    --accent-soft:#eef1ff;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px}
+  .brand{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:40px;
+  }
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);display:inline-block}
+  h1{
+    font-size:clamp(34px,6vw,52px);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    font-weight:400;
+    margin:0 0 8px;
+  }
+  .eyebrow{
+    font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 32px;
+  }
+  h2{
+    font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);
+    margin:48px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);
+  }
+  p{margin:0 0 16px;color:#2a2a30}
+  .prompt p{color:#3a3a42}
+  .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:13px 22px;border-radius:10px;
+    font-size:15px;font-weight:600;text-decoration:none;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn--primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(26,77,255,.22)}
+  .btn--ghost{background:var(--accent-soft);color:var(--accent);border:1px solid #d9e0ff}
+  .notes{
+    background:#fafafb;border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;margin-top:14px;
+  }
+  .notes p{margin:0;color:#3a3a42}
+  footer{margin-top:64px;font-size:12px;color:#9a9aa2;letter-spacing:.03em}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Revelo UI Gen example</h1>
+
+  <h2>Prompt</h2>
+  <div class="prompt">
+    <p>
+      I run a little workshop in Turin where I restore old Italian espresso machines by hand, one at a time. Faema, Gaggia, La Cimbali, that kind of thing. The shop is called Crema Vecchia. I want a website for it, something that feels properly high-end, like the design studio sites that win awards, with smooth animations and beautiful typography. Nothing corporate or templated looking. Use a nice font and make it feel crafted.
+    </p>
+  </div>
+
+  <h2>Results</h2>
+  <div class="buttons">
+    <a class="btn btn--ghost" href="model/index.html" target="_blank">Claude Opus 4.8</a>
+    <a class="btn btn--primary" href="redesign/index.html" target="_blank">Redesign</a>
+  </div>
+
+  <h2>UI Notes</h2>
+  <div class="notes">
+    <p>
+      <em>The original design had very beautiful typography, so I kept it similar. I just got a more modern sans serif font for the body text, so it doesn't feel too vintage. On the colors, it was using Claude standard color palette, which is being overused around the web. So I suggested a lighter and more original color palette of light purple, bright blue and white, so the real content of the website can shine and it looks fresher. I created some images of the user and his machines with AI, so it looks more realistic than the illustrations of the original site. Also, added motion design in the header, text and in the main pieces of content, so the site is more interactive and fun to use.</em>
+    </p>
+  </div>
+
+  <footer>© Revelo</footer>
+
+</div>
+</body>
+</html>
